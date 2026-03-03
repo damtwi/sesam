@@ -1,0 +1,51 @@
+ 
+ @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+ @
+ @             S E S A M   Software
+ @
+ @   SystEm of Sequential Assimilation Modules
+ @ 
+ @
+ @ Equipe MEOM
+ @ LEGI/IMG
+ @ Grenoble
+ @
+ @ version SESAM 4.3
+ @ (2012)
+ @
+ @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+ 
+  Check SESAM real variable types:
+  ================================
+  Precision kr :
+  --------------
+  kr              =           8
+  digits(xprec)   =          53
+  epsilon(xprec)  =  2.220446049250313E-016
+  huge(xprec)     =  1.797693134862316E+308
+  precision(xprec)=          15
+  
+  Precision kr8:
+  --------------
+  kr8              =           8
+  digits(xprec8)   =          53
+  epsilon(xprec8)  =  2.220446049250313E-016
+  huge(xprec8)     =  1.797693134862316E+308
+  precision(xprec8)=          15
+  
+  Precision kr4:
+  --------------
+  kr4              =           4
+  digits(xprec4)   =          24
+  epsilon(xprec4)  =  1.1920929E-07
+  huge(xprec4)     =  3.4028235E+38
+  precision(xprec4)=           6
+ 
+ *** ROUTINE : sesam/defcst :
+          define SESAM configuration
+ *** sesam/defcst/defswi :
+          define SESAM structure
+ *** ROUTINE sesam/defcst/defctl :
+          load user configuration
+ *** ROUTINE : sesam/defctl/readlist :
+          read SESAM configuration file
