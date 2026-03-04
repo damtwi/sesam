@@ -343,7 +343,7 @@
 !  Input :  kfninobs    : filename
 !  -----    kjobs       : observed variable index
 !
-!  Output : kgridijkobs : observation location (x,y,z)
+!  Output : kgridijkobs : observation location (x,y,z,t)
 !  ------   kposcoefobs : observation operator (interpolation points
 !                         and interpolation coefficients)
 !           kvectorms   : associated error value (obsolete)
@@ -362,7 +362,7 @@
       CHARACTER(len=*), intent(in) :: kfninobs
       INTEGER, intent(in) :: kjobs,kflagcfg
       BIGREAL, dimension(:), optional, intent(out) :: kvectorms
-      TYPE (type_gridijk), dimension(:), optional, intent(out) ::  &
+      TYPE (type_grid4d), dimension(:), optional, intent(out) ::  &
      &     kgridijkobs
       TYPE (type_poscoef), dimension(:,:), optional, intent(out) ::  &
      &     kposcoefobs
@@ -595,7 +595,7 @@
 !  -----   kjobs       : observed variable index
 !          kvecto      : vector of observed values in file
 !          kvectorms   : associated error value (obsolete)
-!          kgridijkobs : observation location (x,y,z)
+!          kgridijkobs : observation location (x,y,z,t)
 !          kposcoefobs : observation operator (interpolation points
 !                         and interpolation coefficients)
 !---------------------------------------------------------------------
@@ -609,7 +609,7 @@
 ! ===================
       CHARACTER(len=*), intent(in) :: kfnoutobs
       BIGREAL, dimension(:), intent(in) :: kvecto,kvectorms
-      TYPE (type_gridijk), dimension(:), intent(in)  :: kgridijkobs
+      TYPE (type_grid4d), dimension(:), intent(in)  :: kgridijkobs
       TYPE (type_poscoef), dimension(:,:), intent(in) :: kposcoefobs
       INTEGER, intent(in) :: kjobs
 !----------------------------------------------------------------------

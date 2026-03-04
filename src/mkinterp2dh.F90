@@ -79,7 +79,7 @@
       TYPE (type_gridij), dimension(:), intent(inout) :: kgridijdbs
       BIGREAL, dimension(:), intent(out) :: kvecto
       BIGREAL, dimension(:), intent(out) :: kvectorms
-      TYPE (type_gridijk), dimension(:), intent(out) :: kgridijkobs
+      TYPE (type_grid4d), dimension(:), intent(out) :: kgridijkobs
       TYPE (type_poscoef), dimension(:,:), intent(out) :: kposcoefobs
       INTEGER, intent(out) :: kjpoend
       LOGICAL, intent(in) :: ldbsrms

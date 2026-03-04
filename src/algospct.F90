@@ -298,7 +298,7 @@
 ! Allocate gridijkobs array
         allocate ( gridijkobs(1:jpssize), stat=allocok )
         IF (allocok.NE.0) GOTO 1001
-        gridijkobs(:)=type_gridijk(FREAL(0.0),FREAL(0.0),FREAL(0.0))
+        gridijkobs(:)=type_grid4d(FREAL(0.0),FREAL(0.0),FREAL(0.0),FREAL(0.0))
 !
 ! Allocate vectorms array
         allocate ( vectorms(1:jpssize), stat=allocok )
@@ -914,7 +914,7 @@
       INTEGER, INTENT( out ) :: knbr
       BIGREAL, DIMENSION(:), INTENT( in ) :: kvects
       TYPE (type_poscoef), dimension(:,:), intent(in) :: kposcoefobs
-      TYPE (type_gridijk), dimension(:), intent(in)  :: kgridijkobs
+      TYPE (type_grid4d), dimension(:), intent(in)  :: kgridijkobs
       BIGREAL, DIMENSION(:), INTENT( in ) :: vectorms
       BIGREAL, DIMENSION(:), INTENT( out ) :: kobs, kobswei
       BIGREAL, DIMENSION(:), INTENT( out ) :: klon, klat

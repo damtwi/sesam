@@ -164,7 +164,7 @@
 !
       IF (dta_jpt(inddta).GT.1)  THEN
 !
-! --- allocation levk
+! --- allocation time
          allocate ( time(1:dta_jpt(inddta)) , stat = allocok )
          IF (allocok.GT.0) GOTO 1001
          time = FREAL(0.0)
@@ -239,7 +239,7 @@
       BIGREAL, dimension(:), allocatable, save :: vectdbs
       BIGREAL, dimension(:), allocatable, save :: vectdbsrms
       TYPE (type_gridij), dimension(:), allocatable :: gridijdbs
-      TYPE (type_gridijk), dimension(:), allocatable :: gridijkdbs
+      TYPE (type_grid4d), dimension(:), allocatable :: gridijkdbs
       TYPE (type_grid4d), dimension(:), allocatable :: griddbs
 !
       BIGREAL, dimension(:), allocatable, save :: vecty
@@ -309,7 +309,7 @@
 ! --- allocation gridijkdbs
           allocate ( gridijkdbs(1:jpdbssize), stat=allocok )
           IF (allocok.NE.0) GOTO 1001
-          gridijkdbs(:) = type_gridijk(FREAL(0.0),FREAL(0.0),FREAL(0.0))
+          gridijkdbs(:) = type_grid4d(FREAL(0.0),FREAL(0.0),FREAL(0.0),FREAL(0.0))
         ENDIF
       ELSE
 ! --- allocation griddbs
@@ -328,7 +328,7 @@
 ! --- allocation gridijkobs
       allocate ( gridijkobs(1:jposize), stat=allocok )
       IF (allocok.NE.0) GOTO 1001
-      gridijkobs(:)=type_gridijk(FREAL(0.0),FREAL(0.0),FREAL(0.0))
+      gridijkobs(:)=type_grid4d(FREAL(0.0),FREAL(0.0),FREAL(0.0),FREAL(0.0))
 ! --- allocation poscoefobs
       allocate ( poscoefobs(1:jposize,1:jpitpsize), stat=allocok )
       IF (allocok.NE.0) GOTO 1001

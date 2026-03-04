@@ -64,7 +64,7 @@
 ! ===================
       INTEGER, intent(out) :: jicrg,jjcrg
       BIGREAL, intent(out) :: ricrg,rjcrg
-      TYPE (type_gridijk), intent(in) :: kgridijkobs
+      TYPE (type_grid4d), intent(in) :: kgridijkobs
       BIGREAL, dimension(:), intent(in) :: kloncrgbias,klatcrgbias
 !----------------------------------------------------------------------
 ! local declarations
